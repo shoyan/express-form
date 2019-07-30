@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title><%= title %></title>
+<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <h1>次の内容を送信しました。</h1>
+    <table>
+        <tr>
+          <th>メニュー</th>
+          <td>
+            <ul>
+                <% body.mc.forEach(function (value, key) { %>
+                <li><%= value %>
+                </li>
+                <% }); %>
+           </ul>
+          </td>
+        </tr>
+    </table>
+    <p>
+      名前： <%= body.name %>
+    </p>
+    <p>
+      性別： <%= body.sex %>
+    </p>
+</body>
+
+</html>
