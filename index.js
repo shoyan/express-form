@@ -27,7 +27,6 @@ app.get("/bookings", (req, res) => {
   dataRef.once(
     "value",
     function(snapshot) {
-      console.log(snapshot.val());
       res.render("bookings.ejs", { title: "予約一覧", bookings: snapshot.val() });
     },
     function(errorObject) {
