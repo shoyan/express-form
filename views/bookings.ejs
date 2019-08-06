@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <table>
+    <% for (var key in bookings) { %>
+    <tr>
+      <td>メニュー： <%= bookings[key]["mc"] %></td>
+      <td>名前： <%= bookings[key]["name"] %></td>
+      <td>性別： <%= bookings[key]["sex"] %></td>
+    </tr>
+    <% } %>
+  </table>
+</body>
+
+</html>
