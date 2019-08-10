@@ -38,6 +38,9 @@ app.get("/bookings", (req, res) => {
 app.post("/", (req, res) => {
   var db = admin.database();
   var ref = db.ref("bookings");
+  if (typeof req.body.mc === 'string') {
+    req.body.mc = [req.body.mc]
+  }
   ref.push(req.body);
 
   res.render("request.ejs", {
