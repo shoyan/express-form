@@ -5,6 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <title><%= title %></title>
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 
 <body>
@@ -56,6 +57,7 @@
         </td>
       </tr>
     </table>
+    予約日：<input type="text" name="booking_date" id="calendar">
     <p>
       名前：<input type="text" name="name" size="40">
     </p>
@@ -67,6 +69,12 @@
       <input type="submit" value="送信"><input type="reset" value="リセット">
     </p>
   </form>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+  <script>
+    flatpickr.localize(flatpickr.l10ns.ja);
+    flatpickr('#calendar');
+  </script>
 </body>
 
 </html>
