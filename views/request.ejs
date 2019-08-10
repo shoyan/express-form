@@ -7,6 +7,7 @@
 </head>
 
 <body>
+  <% include _menu %>
   <h1>次の内容を送信しました。</h1>
     <table>
         <tr>
@@ -21,6 +22,9 @@
           </td>
         </tr>
     </table>
+    <p>
+      予約日： <%= body.booking_date %>
+    </p>
     <p>
       名前： <%= body.name %>
     </p>
