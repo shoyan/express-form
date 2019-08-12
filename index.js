@@ -18,6 +18,16 @@ app.use(express.static("public"));
 
 app.engine("ejs", ejs.renderFile);
 
+/**
+ * エラーメッセージを表示する
+ */
+app.locals.showErrorMessage = function(name, errors) {
+  const error = errors.filter(e => e.param === name);
+  if (error.length > 0) {
+    return '<p class="error">' + error[0].msg + "</p>";
+  }
+};
+
 app.get("/", (req, res) => {
   res.render("index.ejs", { title: "Express Form", errors: [] });
 });
@@ -66,12 +76,14 @@ app.post(
   ],
   (req, res) => {
     const errors = validationResult(req);
-        console.log(errors.array().map(e => {
-          var obj = {};
-          obj[e.param] = e.msg;
-          return obj;
-        }))
- 
+    console.log(
+      errors.array().map(e => {
+        var obj = {};
+        obj[e.param] = e.msg;
+        return obj;
+      })
+    );
+
     if (!errors.isEmpty()) {
       res.render("index.ejs", {
         title: "Express Form",
