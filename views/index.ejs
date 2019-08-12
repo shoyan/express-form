@@ -17,7 +17,7 @@
     <ul>
       <% menu.forEach(function (value, index) { %>
       <li>
-        <input type="checkbox" name="mc" value="<%= value %>" id="menuCategory<%= index %>">
+        <input type="checkbox" name="mc" value="<%= value %>" id="menuCategory<%= index %>" <%= checkedCheckbox(body.mc, value)%>>
         <label for="menuCategory<%= index %>"><%= value %></label>
       </li>
       <% }); %>

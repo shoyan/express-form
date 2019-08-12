@@ -37,8 +37,14 @@ app.locals.checked = function(key, value, body) {
   return body[key] === value ? "checked" : "";
 };
 
+app.locals.checkedCheckbox = function(values, value) {
+  if (!values) {
+    return "";
+  }
+  return values.indexOf(value) >= 0 ? "checked" : "";
+};
+
 app.get("/", (req, res) => {
-  console.log(menu)
   res.render("index.ejs", { title: "Express Form", menu, body: {}, errors: [] });
 });
 
@@ -62,8 +68,6 @@ app.post(
     body("mc")
       .not()
       .isEmpty()
-      .trim()
-      .escape()
       .withMessage("必須項目です。"),
     body("booking_date")
       .not()
@@ -86,7 +90,7 @@ app.post(
   ],
   (req, res) => {
     const errors = validationResult(req);
-    console.log(req.body);
+
     if (!errors.isEmpty()) {
       res.render("index.ejs", {
         title: "Express Form",
