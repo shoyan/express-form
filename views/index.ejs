@@ -12,67 +12,31 @@
   <% include _menu %>
 
   <form action="/" method="post">
+    <p>＊メニュー</p>
     <%- showErrorMessage('mc', errors) %>
-    <table>
-      <tr>
-        <th>＊メニュー</th>
-        <td>
-          <ul>
-            <li>
-              <input type="checkbox" name="mc" value="カット" id="menuCategory0">
-              <label for="menuCategory0">カット</label>
-            </li>
-            <li>
-              <input type="checkbox" name="mc" value="カラー" id="menuCategory1">
-              <label for="menuCategory1">カラー</label>
-            </li>
-            <li>
-              <input type="checkbox" name="mc" value="パーマ" id="menuCategory2">
-              <label for="menuCategory2">パーマ</label>
-            </li>
-            <li>
-              <input type="checkbox" name="mc" value="縮毛矯正" id="menuCategory3">
-              <label for="menuCategory3">縮毛矯正</label>
-            </li>
-            <li>
-              <input type="checkbox" name="mc" value="エクステ" id="menuCategory4">
-              <label for="menuCategory4" class="fgLLLGray">エクステ</label>
-            </li>
-            <li>
-              <input type="checkbox" name="mc" value="トリートメント" id="menuCategory5">
-              <label for="menuCategory5">トリートメント</label>
-            </li>
-            <li>
-              <input type="checkbox" name="mc" value="ヘアセット" id="menuCategory6">
-              <label for="menuCategory6">ヘアセット</label>
-            </li>
-            <li>
-              <input type="checkbox" name="mc" value="ヘッドスパ" id="menuCategory7">
-              <label for="menuCategory7">ヘッドスパ</label>
-            </li>
-            <li>
-              <input type="checkbox" name="mc" value="その他" id="menuCategory9">
-              <label for="menuCategory9">その他</label>
-            </li>
-          </ul>
-        </td>
-      </tr>
-    </table>
+    <ul>
+      <% menu.forEach(function (value, index) { %>
+      <li>
+        <input type="checkbox" name="mc" value="<%= value %>" id="menuCategory<%= index %>">
+        <label for="menuCategory<%= index %>"><%= value %></label>
+      </li>
+      <% }); %>
+    </ul>
 
     <%- showErrorMessage('booking_date', errors) %>
     <p>
-      ＊予約日：<input type="text" name="booking_date" id="calendar">
+      ＊予約日：<input type="text" name="booking_date" id="calendar" value="<%= getValue('booking_date', body) %>">
     </p>
 
     <%- showErrorMessage('name', errors) %>
     <p>
-      ＊名前：<input type="text" name="name" size="40">
+      ＊名前：<input type="text" name="name" size="40" value="<%= getValue('name', body) %>">
     </p>
 
     <%- showErrorMessage('sex', errors) %>
     <p>
-      ＊性別：<input type="radio" name="sex" value="男">男
-      <input type="radio" name="sex" value="女">女
+      ＊性別：<input type="radio" name="sex" value="男" <%= checked('sex', '男', body) %>>男
+      <input type="radio" name="sex" value="女" <%= checked('sex', '女', body) %>>女
     </p>
     <p>
       <input type="submit" value="送信">

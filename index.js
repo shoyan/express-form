@@ -5,6 +5,7 @@ var bodyParser = require("body-parser");
 var admin = require("firebase-admin");
 require("dotenv").config();
 
+const menu = ["カット", "カラー", "パーマ", "縮毛矯正", "エクステ", "トリートメント", "ヘアセット", "ヘッドスパ", "その他"];
 var serviceAccount = require(process.env.FIREBASE_JSON_PATH);
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -28,8 +29,17 @@ app.locals.showErrorMessage = function(name, errors) {
   }
 };
 
+app.locals.getValue = function(key, body, defaultVal = "") {
+  return typeof body === "undefined" ? defaultVal : body[key];
+};
+
+app.locals.checked = function(key, value, body) {
+  return body[key] === value ? "checked" : "";
+};
+
 app.get("/", (req, res) => {
-  res.render("index.ejs", { title: "Express Form", errors: [] });
+  console.log(menu)
+  res.render("index.ejs", { title: "Express Form", menu, body: {}, errors: [] });
 });
 
 app.get("/bookings", (req, res) => {
@@ -76,17 +86,11 @@ app.post(
   ],
   (req, res) => {
     const errors = validationResult(req);
-    console.log(
-      errors.array().map(e => {
-        var obj = {};
-        obj[e.param] = e.msg;
-        return obj;
-      })
-    );
-
+    console.log(req.body);
     if (!errors.isEmpty()) {
       res.render("index.ejs", {
         title: "Express Form",
+        menu,
         body: req.body,
         errors: errors.array()
       });
