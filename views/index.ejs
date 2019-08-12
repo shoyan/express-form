@@ -11,7 +11,24 @@
 <body>
   <% include _menu %>
 
+  <% if (errors){ %>
+  <ul>
+    <% for(index in errors) { %>
+    <li><%= errors[index].msg %></li>
+    <% } %>
+  </ul>
+  <% } %>
+
+  <%# エラーメッセージを表示する %>
+  <% const showErrorMessage = function(name, errors){ %>
+  <% const error = errors.filter(e => e.param === name) %>
+  <% if(error.length > 0) { %>
+  <p class="error"><%= error[0].msg %></p>
+  <% }%>
+  <% }; %>
+
   <form action="/" method="post">
+    <%- showErrorMessage('mc', errors) %>
     <table>
       <tr>
         <th>メニュー</th>
@@ -57,16 +74,24 @@
         </td>
       </tr>
     </table>
-    予約日：<input type="text" name="booking_date" id="calendar">
+
+    <%- showErrorMessage('booking_date', errors) %>
+    <p>
+      予約日：<input type="text" name="booking_date" id="calendar">
+    </p>
+
+    <%- showErrorMessage('name', errors) %>
     <p>
       名前：<input type="text" name="name" size="40">
     </p>
+
+    <%- showErrorMessage('sex', errors) %>
     <p>
       性別：<input type="radio" name="sex" value="男">男
       <input type="radio" name="sex" value="女">女
     </p>
     <p>
-      <input type="submit" value="送信"><input type="reset" value="リセット">
+      <input type="submit" value="送信">
     </p>
   </form>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
