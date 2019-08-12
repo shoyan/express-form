@@ -46,3 +46,7 @@ li a {
 li a:hover:not(.active) {
   background-color: #a9bce2;
 }
+
+.error {
+  color: red;
+}

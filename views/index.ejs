@@ -12,9 +12,10 @@
   <% include _menu %>
 
   <form action="/" method="post">
+    <%- showErrorMessage('mc', errors) %>
     <table>
       <tr>
-        <th>メニュー</th>
+        <th>＊メニュー</th>
         <td>
           <ul>
             <li>
@@ -57,16 +58,24 @@
         </td>
       </tr>
     </table>
-    予約日：<input type="text" name="booking_date" id="calendar">
+
+    <%- showErrorMessage('booking_date', errors) %>
     <p>
-      名前：<input type="text" name="name" size="40">
+      ＊予約日：<input type="text" name="booking_date" id="calendar">
     </p>
+
+    <%- showErrorMessage('name', errors) %>
     <p>
-      性別：<input type="radio" name="sex" value="男">男
+      ＊名前：<input type="text" name="name" size="40">
+    </p>
+
+    <%- showErrorMessage('sex', errors) %>
+    <p>
+      ＊性別：<input type="radio" name="sex" value="男">男
       <input type="radio" name="sex" value="女">女
     </p>
     <p>
-      <input type="submit" value="送信"><input type="reset" value="リセット">
+      <input type="submit" value="送信">
     </p>
   </form>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
