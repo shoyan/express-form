@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="/style.css" />
+  <link type="text/css" rel="stylesheet" href="/css/style-responsive.css">
+  <title>美容室予約フォーム</title>
+</head>
+
+<body class="selectform calendar free-plan">
+  <link rel="stylesheet" href="/css/theme13.css">
+
+  <div class="body">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="content">
+          <h1>美容室予約フォーム</h1>
+          <div class="content-body">
+            <h2>ご希望メニュー</h2>
+
+            <div class="list-group">
+              <ul class="list-box list-box-column">
+                <li>
+                  <div class="box hightlight">
+                    <div class="box-header chg-text2">カット</div>
+                    <div class="box-body clearfix chg-text2">
+                      <p>カットの説明です。<br>料金表示設定や画像ギャラリーも掲載可能です。<br>不要な場合は空欄にしてください。</p>
+                      <div class="box-footer">
+                        <a href="#" class="btn btn-primary selectbtn_cls">選択する</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="box">
+                    <div class="box-header chg-text2">カット+パーマ</div>
+                    <div class="box-body clearfix chg-text2">
+                      <p>カット+パーマの説明です。<br>料金表示設定や画像ギャラリーも掲載可能です。<br>不要な場合は空欄にしてください。</p>
+                      <div class="box-footer">
+                        <a href="#" class="btn btn-primary selectbtn_cls">選択する</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="box">
+                    <div class="box-header chg-text2">カット+カラー</div>
+                    <div class="box-body clearfix chg-text2">
+                      <p>カット+カラーの説明です。<br>料金表示設定や画像ギャラリーも掲載可能です。<br>不要な場合は空欄にしてください。</p>
+                      <div class="box-footer">
+                        <a href="#" class="btn btn-primary selectbtn_cls">選択する</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="box">
+                    <div class="box-header chg-text2">カット+トリートメント</div>
+                    <div class="box-body clearfix chg-text2">
+                      <p>カット+トリートメントの説明です。<br>料金表示設定や画像ギャラリーも掲載可能です。<br>不要な場合は空欄にしてください。</p>
+                      <div class="box-footer">
+                        <a href="#" class="btn btn-primary selectbtn_cls">選択する</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 class="list-title chg-text2">「予約日時」の選択</h2>
+              <div class="cl-action row-fluid">
+                <div class="span4">
+                  <a href="#" class="btn chg-text2 btn11_label_cls input_bg_col_cls calbtn_cls">今日</a>
+                  <div class="btn-group">
+                    <a href="#" class="btn input_bg_col_cls calbtn_cls"><span
+                        class="glyphicon glyphicon-chevron-right chg-text2 calbtn_cls"></span></a>
+                  </div>
+                </div>
+                <div class="span4 cl-title align-center chg-text2"><span class="chg-text1">8/10～ 8/16</span></div>
+              </div>
+              <div class="cl-sign chg-text2 avail_area_cls rsvcal_cls">
+                <span class="symbol-black">●</span><span class="avail1_label_cls">受付中</span>
+                <span class="symbol-black">▲</span><span class="avail2_label_cls">残りわずか</span>
+                <span class="symbol-black">×</span><span class="avail3_label_cls">締め切り</span>
+              </div>
+            </div>
+
+            <div class="cl-type-week rsvcal_cls">
+              <table class="table table-bordered cl-header">
+                <thead>
+                  <tr>
+                    <th class="cl-time">&nbsp;</th>
+                    <% bookingData.forEach(function (value, key) { %>
+                    <th class="cl-day">
+                      <%= value.date %>
+                      <span class="sm-block">(<%= value.dayOfWeek %>)</span>
+                    </th>
+                    <% }); %>
+                    <th class="cl-scroll-width">&nbsp;</th>
+                  </tr>
+                </thead>
+              </table>
+
+              <div class="cl-scrollarea">
+                <table class="table table-bordered cl-container">
+                  <tbody>
+                    <% times.forEach(function (value, listKey) { %>
+                    <tr>
+                      <td class="cl-time time_cell_cls"><span class="time_cell_txt_cls"><%= value %></span></td>
+                      <% bookingData.forEach(function (val, key) { %>
+                      <td class="cl-day">
+                        <div class="cl-half-time">
+                          <div class="cl-day-content">
+                            <%= val.list[listKey].state %>
+                          </div>
+                        </div>
+                      </td>
+                      <% }); %>
+                    </tr>
+                    <% }); %>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,459 @@
+.selectform.calendar .table,
+.selectform.calendar .table td,
+.selectform.calendar .table th {
+  border-color: #ddd
+}
+
+.selectform.calendar .cl-header,
+.selectform.calendar .cl-type-month tr {
+  background-color: #fff
+}
+
+.selectform.calendar .cl-header th {
+  color: #999
+}
+
+.cl-satday {
+  background-color: #ecf2fd;
+  color: #6aa7ea !important
+}
+
+.cl-sunday {
+  background-color: #fceded;
+  color: #ea6a6a !important
+}
+
+.cl-notday {
+  background-color: #f9f9f9 !important
+}
+
+.cl-time {
+  color: #999 !important
+}
+
+.cl-bg .cl-day,
+.cl-bg .cl-time,
+.cl-container .cl-day,
+.cl-container .cl-time {
+  background-color: #fff
+}
+
+[class*=label-type]:hover {
+  color: #fff !important
+}
+
+.selectform .selected,
+.selectform .cl-container .cl-day-content a:hover,
+.selectform .cl-type-month .cl-day a:hover {
+  background-color: #429ce6
+}
+
+.selectform .cl-type-month .cl-day a:hover * {
+  color: #fff !important
+}
+
+.label-type0:hover,
+.label-type0.selected,
+.selectform .body .label-type0_slt:hover,
+.selectform .body .label-type0_slt.selected {
+  background-color: #09f !important;
+  border-color: #09f !important;
+  color: #fff !important
+}
+
+.label-type1:hover,
+.label-type1.selected,
+.selectform .body .label-type1_slt:hover,
+.selectform .body .label-type1_slt.selected {
+  background-color: #00b285 !important;
+  border-color: #00b285 !important;
+  color: #fff !important
+}
+
+.label-type2:hover,
+.label-type2.selected,
+.selectform .body .label-type2_slt:hover,
+.selectform .body .label-type2_slt.selected {
+  background-color: #d24dff !important;
+  border-color: #d24dff !important;
+  color: #fff !important
+}
+
+.label-type3:hover,
+.label-type3.selected,
+.selectform .body .label-type3_slt:hover,
+.selectform .body .label-type3_slt.selected {
+  background-color: #36c !important;
+  border-color: #36c !important;
+  color: #fff !important
+}
+
+.label-type4:hover,
+.label-type4.selected,
+.selectform .body .label-type4_slt:hover,
+.selectform .body .label-type4_slt.selected {
+  background-color: #ed5565 !important;
+  border-color: #ed5565 !important;
+  color: #fff !important
+}
+
+.label-type5:hover,
+.label-type5.selected,
+.selectform .body .label-type5_slt:hover,
+.selectform .body .label-type5_slt.selected {
+  background-color: #89b700 !important;
+  border-color: #89b700 !important;
+  color: #fff !important
+}
+
+.label-type6:hover,
+.label-type6.selected,
+.selectform .body .label-type6_slt:hover,
+.selectform .body .label-type6_slt.selected {
+  background-color: #f90 !important;
+  border-color: #f90 !important;
+  color: #fff !important
+}
+
+.label-type7:hover,
+.label-type7.selected {
+  background-color: #5731bb !important;
+  color: #fff !important
+}
+
+.label-type8:hover,
+.label-type8.selected {
+  background-color: #c60 !important;
+  color: #fff !important
+}
+
+.label-type9:hover,
+.label-type9.selected {
+  background-color: #f69 !important;
+  color: #fff !important
+}
+
+.label-type10:hover,
+.label-type10.selected {
+  background-color: #d29e00 !important;
+  color: #fff !important
+}
+
+.label-type11:hover,
+.label-type11.selected {
+  background-color: #005942 !important;
+  color: #fff !important
+}
+
+.label-type12:hover,
+.label-type12.selected {
+  background-color: #7c00a6 !important;
+  color: #fff !important
+}
+
+.label-type13:hover,
+.label-type13.selected,
+.selectform .body .label-type13_slt:hover,
+.selectform .body .label-type13_slt.selected {
+  background-color: #193266 !important;
+  border-color: #193266 !important;
+  color: #fff !important
+}
+
+.label-type14:hover,
+.label-type14.selected {
+  background-color: #910f1d !important;
+  color: #fff !important
+}
+
+.label-type15:hover,
+.label-type15.selected {
+  background-color: #445b00 !important;
+  color: #fff !important
+}
+
+.label-type16:hover,
+.label-type16.selected {
+  background-color: #7f4c00 !important;
+  color: #fff !important
+}
+
+.label-type17:hover,
+.label-type17.selected {
+  background-color: #004c7f !important;
+  color: #fff !important
+}
+
+.label-type18:hover,
+.label-type18.selected {
+  background-color: #2b185d !important;
+  color: #fff !important
+}
+
+.label-type19:hover,
+.label-type19.selected {
+  background-color: #b2003b !important;
+  color: #fff !important
+}
+
+.label-type20:hover,
+.label-type20.selected {
+  background-color: #694e00 !important;
+  color: #fff !important
+}
+
+.label-type21:hover,
+.label-type21.selected {
+  background-color: #00c1ff !important;
+  color: #fff !important
+}
+
+.label-type22:hover,
+.label-type22.selected {
+  background-color: #00b595 !important;
+  color: #fff !important
+}
+
+.label-type23:hover,
+.label-type23.selected {
+  background-color: #e86eff !important;
+  color: #fff !important
+}
+
+.label-type24:hover,
+.label-type24.selected {
+  background-color: #4a8de4 !important;
+  color: #fff !important
+}
+
+.label-type25:hover,
+.label-type25.selected {
+  background-color: #ce8552 !important;
+  color: #fff !important
+}
+
+.label-type26:hover,
+.label-type26.selected {
+  background-color: #89a600 !important;
+  color: #fff !important
+}
+
+.label-type27:hover,
+.label-type27.selected {
+  background-color: #d59b02 !important;
+  color: #fff !important
+}
+
+.label-type28:hover,
+.label-type28.selected {
+  background-color: #7b47d9 !important;
+  color: #fff !important
+}
+
+.label-type29:hover,
+.label-type29.selected {
+  background-color: #e48d00 !important;
+  color: #fff !important
+}
+
+.label-type30:hover,
+.label-type30.selected {
+  background-color: #ff8dc1 !important;
+  color: #fff !important
+}
+
+.label-type31:hover,
+.label-type31.selected {
+  background-color: #4b8056 !important;
+  color: #fff !important
+}
+
+.label-type32:hover,
+.label-type32.selected {
+  background-color: #ce8552 !important;
+  color: #fff !important
+}
+
+.label-type33:hover,
+.label-type33.selected {
+  background-color: #7f6e5e !important;
+  color: #fff !important
+}
+
+.label-type34:hover,
+.label-type34.selected {
+  background-color: #2d3e50 !important;
+  color: #fff !important
+}
+
+.label-type35:hover,
+.label-type35.selected,
+.selectform .body .label-type35_slt:hover,
+.selectform .body .label-type35_slt.selected {
+  background-color: #b2003b !important;
+  border-color: #b2003b !important;
+  color: #fff !important
+}
+
+.label-type36:hover,
+.label-type36.selected {
+  background-color: #7d649b !important;
+  color: #fff !important
+}
+
+.label-type37:hover,
+.label-type37.selected {
+  background-color: #003eff !important;
+  color: #fff !important
+}
+
+.label-type38:hover,
+.label-type38.selected {
+  background-color: #bf00ff !important;
+  color: #fff !important
+}
+
+.label-type39:hover,
+.label-type39.selected {
+  background-color: #1b72ff !important;
+  color: #fff !important
+}
+
+.label-type40:hover,
+.label-type40.selected,
+.selectform .body .label-type40_slt:hover,
+.selectform .body .label-type40_slt.selected {
+  background-color: #00723e !important;
+  border-color: #00723e !important;
+  color: #fff !important
+}
+
+.label-type41:hover,
+.label-type41.selected {
+  background-color: #20a286 !important;
+  color: #fff !important
+}
+
+.label-type42:hover,
+.label-type42.selected {
+  background-color: #80426b !important;
+  color: #fff !important
+}
+
+.label-type43:hover,
+.label-type43.selected {
+  background-color: #2481bc !important;
+  color: #fff !important
+}
+
+.label-type44:hover,
+.label-type44.selected {
+  background-color: #ce4c4c !important;
+  color: #fff !important
+}
+
+.label-type45:hover,
+.label-type45.selected {
+  background-color: #e77e23 !important;
+  color: #fff !important
+}
+
+.label-type46:hover,
+.label-type46.selected {
+  background-color: #e1b70f !important;
+  color: #fff !important
+}
+
+.label-type47:hover,
+.label-type47.selected {
+  background-color: #b39147 !important;
+  color: #fff !important
+}
+
+.label-type48:hover,
+.label-type48.selected {
+  background-color: #ce7057 !important;
+  color: #fff !important
+}
+
+.label-type49:hover,
+.label-type49.selected {
+  background-color: #517f72 !important;
+  color: #fff !important
+}
+
+.label-type50:hover,
+.label-type50.selected {
+  background-color: #ff2f73 !important;
+  color: #fff !important
+}
+
+.selectform .body .cl-type-week .label-type3_slt.disabled,
+.selectform .body .cl-type-week .label-type3_slt.disabled:hover {
+  background-color: #f0f4fb !important;
+  color: #99b3e6 !important;
+  border-color: #99b3e6 !important
+}
+
+.selectform .body .cl-type-week .label-type0_slt.disabled,
+.selectform .body .cl-type-week .label-type0_slt.disabled:hover {
+  background-color: #ecf8ff !important;
+  color: #80ccff !important;
+  border-color: #80ccff !important
+}
+
+.selectform .body .cl-type-week .label-type1_slt.disabled,
+.selectform .body .cl-type-week .label-type1_slt.disabled:hover {
+  background-color: #ecfaf6 !important;
+  color: #80d9c2 !important;
+  border-color: #80d9c2 !important
+}
+
+.selectform .body .cl-type-week .label-type5_slt.disabled,
+.selectform .body .cl-type-week .label-type5_slt.disabled:hover {
+  background-color: #f6faec !important;
+  color: #c4db80 !important;
+  border-color: #c4db80 !important
+}
+
+.selectform .body .cl-type-week .label-type6_slt.disabled,
+.selectform .body .cl-type-week .label-type6_slt.disabled:hover {
+  background-color: #fff8ec !important;
+  color: #ffcc80 !important;
+  border-color: #ffcc80 !important
+}
+
+.selectform .body .cl-type-week .label-type4_slt.disabled,
+.selectform .body .cl-type-week .label-type4_slt.disabled:hover {
+  background-color: #fef3f4 !important;
+  color: #f6aab2 !important;
+  border-color: #f6aab2 !important
+}
+
+.selectform .body .cl-type-week .label-type2_slt.disabled,
+.selectform .body .cl-type-week .label-type2_slt.disabled:hover {
+  background-color: #fcf2ff !important;
+  color: #e9a6ff !important;
+  border-color: #e9a6ff !important
+}
+
+.selectform .body .cl-type-week .label-type13_slt.disabled,
+.selectform .body .cl-type-week .label-type13_slt.disabled:hover {
+  background-color: #eef0f4 !important;
+  color: #8c99b3 !important;
+  border-color: #8c99b3 !important
+}
+
+.selectform .body .cl-type-week .label-type40_slt.disabled,
+.selectform .body .cl-type-week .label-type40_slt.disabled:hover {
+  background-color: #ecf5f1 !important;
+  color: #80b99f !important;
+  border: 1px solid #80b99f !important
+}
+
+.selectform .body .cl-type-week .label-type35_slt.disabled,
+.selectform .body .cl-type-week .label-type35_slt.disabled:hover {
+  background-color: #faecf1 !important;
+  color: #d9809d !important;
+  border: 1px solid #d87f9c !important
+}

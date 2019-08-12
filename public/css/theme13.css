@@ -1,0 +1,38 @@
+.selectform .topic-title,
+.selectform .list-title,
+.selectform a {
+  color: #e4a2a3
+}
+
+.selectform .btn-primary,
+.selectform .btn-primary:hover,
+.selectform .btn-primary:focus,
+.selectform .progress .bar,
+.selectform.event .contact-link a {
+  background-color: #f3bccd
+}
+
+.selectform .answer .hightlight,
+.selectform .answer-image .hightlight,
+.selectform .label,
+.selectform.calendar .list-group-item.hightlight,
+.selectform .btn-box-blue,
+.selectform .btn-box-blue:hover,
+.selectform .btn-box-blue:focus {
+  background-color: #f3bccd;
+  border: 0;
+  color: #FFF
+}
+
+.selectform .list-box .box.hightlight {
+  background-color: rgba(243, 188, 205, 0.4);
+  color: #333
+}
+
+.background {
+  background-image: url(/img/theme/pattern3.png)
+}
+
+.selectform .reserve-contact-head a {
+  color: #333
+}
