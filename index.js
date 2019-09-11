@@ -48,6 +48,16 @@ app.get("/", (req, res) => {
   res.render("index.ejs", { title: "Express Form", menu, body: {}, errors: [] });
 });
 
+app.get("/reserve", (req, res) => {
+  res.render("reserve.ejs", { title: "Express Form", menu, body: {}, errors: [] });
+});
+
+app.get("/reserve2", (req, res) => {
+  res.render("reserve2.ejs", { title: "Express Form", menu, body: {}, query: req.query , errors: [] });
+});
+
+
+
 app.get("/bookings", (req, res) => {
   var db = admin.database();
   var dataRef = db.ref("bookings");
